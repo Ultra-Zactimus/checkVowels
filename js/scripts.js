@@ -8,3 +8,14 @@ function vowelCounter(string) {
     }   
     return vowelCount;   
 }
+
+function vowelTransformer(string){
+  const vowels = ["a", "e", "i", "o", "u"];
+  for(i = 0; vowels.length; i++){
+    if(string.charAt(0) === vowels[i]){
+      return string + "way";
+    }else{
+      return string;
+    }
+  }
+}
