@@ -1,25 +1,10 @@
-const vowels = ["a", "e", "i", "o", "u"];
-
-function vowelCounter(vowels,string) {
-  let vowelCount=0;
-  for (let i = 0; i < vowels.length; i+=1){
-      if (vowels[i] === string.toLowerCase()){
+function vowelCounter(string) {
+  let vowelCount = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (let char of string.toLowerCase()){
+      if (vowels.includes(char)){
         vowelCount ++;
-        console.log(vowelCount);
-        return vowelCount;
-      } else {
-        return 0;
       }
-  }
+    }   
+    return vowelCount;   
 }
-
-
-/*
-let vowelCount = 0;
-for(let i = 0; i< vowels.length; i+=1){
-  if(vowels[i] === string.toLowerCase()){
-    vowelCount ++;
-    console.log(vowelCount);
-    return vowelCount;
-  }
-}*/
